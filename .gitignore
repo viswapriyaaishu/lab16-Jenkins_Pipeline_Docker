@@ -1,5 +1,14 @@
+# Maven build output
 target/
+
+# IDE files
 .idea/
 .vscode/
 *.iml
+
+# Maven dependency-reduced POM
 dependency-reduced-pom.xml
+
+# JVM crash logs
+hs_err_pid*.log
+replay_pid*.log
