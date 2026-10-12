@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -12,21 +11,21 @@ pipeline {
         stage('Maven Test') {
             steps {
                 echo 'Running Maven tests'
-                bat 'mvn clean test'
+                sh 'mvn clean test'
             }
         }
 
         stage('Maven Package') {
             steps {
                 echo 'Packaging the application'
-                bat 'mvn package'
+                sh 'mvn package'
             }
         }
 
         stage('Docker Build') {
             steps {
                 echo 'Building Docker image'
-                bat 'docker build -t java-maven-app:latest .'
+                sh 'docker build -t java-maven-app:latest .'
             }
         }
     }
